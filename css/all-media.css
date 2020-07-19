@@ -1,0 +1,76 @@
+@media screen and (max-width: 500px) {
+  nav .logo img {
+    width: 60px;
+  }
+  nav .logo span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  header .cont-header {
+    left: 3%;
+  }
+}
+
+@media screen and (max-width: 1305px) {
+  body {
+    overflow-x: hidden;
+  }
+  .burgar {
+    display: block !important;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 90vh;
+    top: 10vh;
+    background-color: #08236d;
+    display: flex;
+    padding-bottom: 22px;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+    padding-bottom: 25px;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-active {
+    transform: translateX(0) !important;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    position: fixed;
+    z-index: 99999999;
+    box-shadow: 0 17px 11px -15px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.an {
+  animation: navlinksfade .5s ease forwards .3;
+}
+
+@keyframes navlinksfade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-6px, -7px);
+}
